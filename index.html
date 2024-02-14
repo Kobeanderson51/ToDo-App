@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
 </head>
+<body>
+  <div class="nav-bar sticky top-0">
 <nav class="bg-gray-700">
     <div class="mx-auto px-2 sm:px-6 lg:px-8">
         <div class="flex h-20 items-center justify-between">
@@ -22,5 +24,34 @@
           </div>
         </div>
   </nav>
+</div>
+<div class="flex flex-row">
+  <div class="side-nav w-1/4 h-screen border-2">
+    <input type="text" class="border-2 w-full p-1"placeholder="Enter List Name..."></input>
+      <div id="item-list"class="flex flex-col">
+      <button class="hover:bg-gray-400 p-2">List 1</button>
+      <button class="hover:bg-gray-400 p-2">List 2</button>
+      <button class="hover:bg-gray-400 p-2">List 3</button>
+      <button id="add-item" class="bg-blue-500 text-white p-2 w-full">Add List</button>
+    </div>
+
+    
+  </div>
+
+  <div class="main w-3/4 flex flex-col p-10">
+    <h1 class="text-7xl flex justify-center">List 1</h1>
+        <div class="list-items">
+          <div class="grid grid-cols-1 gap-3">
+            <ul>
+              <li class="border-2 p-2 mt-2"><input type="checkbox" id="task1"><label for="task1"> Task 1</label></li>
+              <li class="border-2 p-2 mt-2"><input type="checkbox" id="task2"><label for="task2"> Task 2</label></li>
+              <li class="border-2 p-2 mt-2"><input type="checkbox" id="task3"><label for="task3"> Task 3</label></li>
+              <li class="border-2 p-2 mt-2"><input type="checkbox" id="task4"><label for="task4"> Task 4</label></li>
+            </ul>
+          </div>
+          <button class="bg-blue-500 text-white p-2 w-full mt-2">Add New List</button>
+        </div>
+  </div>
+</div>
 </body>
 </html>
