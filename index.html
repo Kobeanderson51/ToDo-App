@@ -4,10 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="./main.js"></script>
+    <script defer src="./main.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
+    <style>
+      li {
+          list-style: none;
+      }
+  </style>
 </head>
 <body>
   <div class="nav-bar sticky top-0">
@@ -16,8 +20,8 @@
         <div class="flex h-20 items-center justify-between">
               <a href="#" class="text-gray-300 rounded-md px-3 py-2 text-3xl font-medium">List</a>
               <div>
-              <i class=" p-10 fa fa-2x fa-cog" aria-hidden="true"></i>
-              <i class="fa fa-2x fa-user h-8 w-8 rounded-full" aria-hidden="true"></i>
+              <i class="p-10 fa text-white fa-2x fa-cog" aria-hidden="true"></i>
+              <i class="fa fa-2x text-white fa-user h-8 w-8 rounded-full" aria-hidden="true"></i>
                 </div>
               </div>
             </div>
@@ -26,32 +30,27 @@
   </nav>
 </div>
 <div class="flex flex-row">
-  <div class="side-nav w-1/4 h-screen border-2">
-    <input type="text" class="border-2 w-full p-1"placeholder="Enter List Name..."></input>
-      <div id="item-list"class="flex flex-col">
-      <button class="hover:bg-gray-400 p-2">List 1</button>
-      <button class="hover:bg-gray-400 p-2">List 2</button>
-      <button class="hover:bg-gray-400 p-2">List 3</button>
-      <button id="add-item" class="bg-blue-500 text-white p-2 w-full">Add List</button>
-    </div>
+  <div class="side-nav w-1/4 border-2 flex flex-col">
+    <input id="left-input"type="text" class="border-2 w-full p-1 hover:bg-gray-300"placeholder="Enter List Name..."></input>
+      <ul id="side-ul"></ul>
+      <button id="left-list"class="hover:bg-blue-700 bg-blue-500 text-white p-2 w-full">Add List</button>
 
     
   </div>
 
   <div class="main w-3/4 flex flex-col p-10">
-    <h1 class="text-7xl flex justify-center">List 1</h1>
-        <div class="list-items">
-          <div class="grid grid-cols-1 gap-3">
-            <ul>
-              <li class="border-2 p-2 mt-2"><input type="checkbox" id="task1"><label for="task1"> Task 1</label></li>
-              <li class="border-2 p-2 mt-2"><input type="checkbox" id="task2"><label for="task2"> Task 2</label></li>
-              <li class="border-2 p-2 mt-2"><input type="checkbox" id="task3"><label for="task3"> Task 3</label></li>
-              <li class="border-2 p-2 mt-2"><input type="checkbox" id="task4"><label for="task4"> Task 4</label></li>
-            </ul>
-          </div>
-          <button class="bg-blue-500 text-white p-2 w-full mt-2">Add New List</button>
+    <h1 class="text-7xl flex justify-center"></h1>
+       
+          <div class="grid grid-cols-1 gap-3 h-screen p-20">
+            <div class="list">
+              <input class="border-2 hover:bg-gray-200 w-full h-20" id="list-input"type="text" placeholder="Add Item Into list">
+              <button class="border-2 bg-blue-500 hover:bg-blue-700 h-20 w-full" id="list-item-add">Add List Item</button>
+              
+              <ul id="list-items" class="p-10 flex flex-col flex-nowrap"></ul>
+              </div>
         </div>
-  </div>
+  
 </div>
+
 </body>
 </html>
