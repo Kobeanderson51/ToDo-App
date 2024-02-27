@@ -50,6 +50,21 @@ function getinput() {
     saveToLocalStorage();
     }
 
+// function edit(event) {
+//     const edit_button = document.getElementById("edit-button");
+//     const end_button = document.getElementById("end-editing");
+//     let text = document.getElementById('text');
+
+//     edit_button.addEventListener("click", function() {
+//     text.contentEditable = true;
+//     text.style.backgroundColor = "black"
+//     } );
+
+//     end_button.addEventListener("click", function() {
+//     text.contentEditable = false;
+//     text.style.backgroundColor = "white"
+//     });
+// }
 
     function remove(event) {
         let removeButton = event.target;
