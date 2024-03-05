@@ -5,6 +5,15 @@
   box-sizing: border-box;
 }
 
+@media only screen and (max-width: 620px) {
+  /* For mobile phones: */
+  .all-tasks, .todo-list {
+    width: 100%;
+  }
+  body {
+    font-size: 1.2rem;
+  }
+}
 body {
   margin: 0;
   font-family: "Work Sans", sans-serif;
