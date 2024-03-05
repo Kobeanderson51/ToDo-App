@@ -1,8 +1,5 @@
-:root {
-    --clr-light: #f4f4f4;
-  }
-  
-  *,
+   *
+   *,
   *::before,
   *::after {
     font-family: inherit;
@@ -151,9 +148,6 @@
   .todo-body {
     padding: var(--spacer);
     position: relative;
-  }
-  
-  .new-task-creator .create {
   }
   
   [type="checkbox"] {
