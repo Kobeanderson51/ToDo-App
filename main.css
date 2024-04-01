@@ -5,21 +5,13 @@
   box-sizing: border-box;
 }
 
-@media only screen and (max-width: 620px) {
-  /* For mobile phones: */
-  .all-tasks, .todo-list {
-    width: 100%;
-  }
-  body {
-    font-size: 1.2rem;
-  }
-}
 body {
+  display: flex;
   margin: 0;
   font-family: "Work Sans", sans-serif;
   font-weight: 300;
   font-size: 1.5rem;
-  background-image: url(./img/360_F_571834789_ujYbUnH190iUokdDhZq7GXeTBRgqYVwa.jpg);
+  background-color: rgb(146, 138, 138);
   display: grid;
   grid: "header header header header" auto "...... lists  active ......" auto/1fr minmax(100px, 300px) minmax(250px, 500px) 1fr;
   align-items: center;
@@ -37,10 +29,16 @@ body {
 
 .all-tasks {
   grid-area: lists;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .task-list-title {
-  color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  color: black;
 }
 
 .task-list {
@@ -48,12 +46,12 @@ body {
   line-height: 1.7;
   list-style: circle;
   padding-left: 1.1em;
-  text-decoration-color: whitesmoke;
+  text-decoration-color: black;
 }
 
 .list-name {
   cursor: pointer;
-  color: whitesmoke;
+  color: black;
 }
 
 .list-name:hover {
@@ -70,7 +68,7 @@ form {
   border: 0;
   padding: 0;
   color: inherit;
-  color: whitesmoke;
+  color: black;
 }
 
 .btn.create {
@@ -124,7 +122,7 @@ form {
 
 .new.list {
   font-size: 1.1rem;
-  color: whitesmoke;
+  color: black;
 }
 
 .new.task {
@@ -136,6 +134,7 @@ form {
 }
 
 .todo-list {
+  width: 100%;
   --spacer: 2rem;
   grid-area: active;
   background: #f4f4f4;
